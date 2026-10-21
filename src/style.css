@@ -1,0 +1,149 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #302820;
+  background: #faf7f2;
+}
+
+header {
+  padding: 22px 16px;
+  background: #302820;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+nav button {
+  padding: 12px 24px;
+  border: 2px solid #d9a65a;
+  border-radius: 6px;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+nav button:hover {
+  background: #d9a65a;
+  color: #302820;
+}
+
+nav button:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 4px;
+}
+
+#content {
+  width: min(100% - 32px, 900px);
+  margin: 0 auto;
+  padding: 48px 0;
+  text-align: center;
+}
+
+#content h1 {
+  margin: 0 0 20px;
+  color: #8b4513;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+#content p {
+  color: #55483b;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.restaurant-image {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  height: 350px;
+  margin: 30px auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.tagline {
+  font-weight: bold;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 32px;
+  text-align: left;
+}
+
+.menu-card {
+  padding: 24px;
+  background: white;
+  border: 1px solid #eadfce;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.menu-card h2 {
+  margin-top: 0;
+  color: #8b4513;
+}
+
+.menu-card p {
+  font-size: 1rem !important;
+}
+
+.menu-card .menu-price {
+  margin-bottom: 0;
+  color: #8b4513;
+  font-weight: bold;
+}
+
+.contact-details {
+  max-width: 600px;
+  margin: 30px auto 0;
+  padding: 24px;
+  background: white;
+  border: 1px solid #eadfce;
+  border-radius: 12px;
+}
+
+.contact-details p {
+  margin: 12px 0;
+}
+
+@media (max-width: 600px) {
+  nav {
+    gap: 8px;
+  }
+
+  nav button {
+    padding: 10px 14px;
+  }
+
+  #content {
+    padding: 32px 0;
+  }
+
+  .restaurant-image {
+    height: 240px;
+  }
+
+  .menu-list {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-card {
+    padding: 20px;
+  }
+}
